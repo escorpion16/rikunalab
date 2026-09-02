@@ -1,0 +1,20 @@
+{
+  "model_name": "efficientnet_b3",
+  "task": "diabetic_retinopathy_binary",
+  "version": "v1",
+  "img_size": 224,
+  "num_classes": 1,
+  "threshold": 0.6094,
+  "classes": {
+    "0": "NRD",
+    "1": "RD"
+  },
+  "preprocessing": "ben_graham",
+  "metrics": {
+    "auroc": 0.9825,
+    "sensitivity": 0.9664,
+    "specificity": 0.9495
+  },
+  "dataset": "APTOS 2019 Blindness Detection",
+  "train_images": 2929
+}

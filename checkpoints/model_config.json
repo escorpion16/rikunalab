@@ -1,0 +1,47 @@
+{
+  "model_name": "efficientnet_b3",
+  "img_size": 224,
+  "dropout": 0.4,
+  "num_classes": 1,
+  "imagenet_mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "imagenet_std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "threshold": 0.5,
+  "version": "v1",
+  "metrics": {
+    "test_auroc": 0.9438,
+    "val_auroc_best": 0.9573,
+    "sensitivity": 0.8675,
+    "specificity": 0.8883,
+    "best_epoch": 15,
+    "dataset": "AIROGS-light-v2",
+    "train_images": 8000
+  },
+  "risk_levels": {
+    "low": {
+      "min": 0,
+      "max": 40,
+      "label": "Sin señales de riesgo",
+      "recommendation": "Revisión en 12 meses"
+    },
+    "medium": {
+      "min": 40,
+      "max": 70,
+      "label": "Riesgo moderado",
+      "recommendation": "Seguimiento en 3 meses"
+    },
+    "high": {
+      "min": 70,
+      "max": 100,
+      "label": "Alto riesgo",
+      "recommendation": "Derivar a oftalmólogo especialista"
+    }
+  }
+}
